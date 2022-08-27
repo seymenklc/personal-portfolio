@@ -81,6 +81,7 @@ export async function getStaticProps({ params }: Context) {
     };
 
     return {
-        props: { post }
+        props: { post },
+        revalidate: 18000 // 5 hours
     };
 }

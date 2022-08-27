@@ -28,6 +28,9 @@ export async function getStaticProps() {
     });
 
     return {
-        props: { posts: data.posts }
+        props: {
+            posts: data.posts
+        },
+        revalidate: 18000 // 5 hours
     };
 }
