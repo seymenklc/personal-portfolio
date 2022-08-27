@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 790px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 30px;
+}
+
+.container p {
+    font-size: large;
+    color: #383639;
+    text-align: justify;
+}
+
+.container span {
+    color: #B0B0B0
+}
+
+.container h2 {
+    color: #383639;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head :nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.head :nth-child(1) span {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.head :nth-child(1) span:hover {
+    scale: 1.2;
+}
+
+@media screen and (max-width: 864px) {
+    .container {
+        width: 100%;
+    }
+
+    .container h2 {
+        font-size: large;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        margin-bottom: 25rem
+    }
+}

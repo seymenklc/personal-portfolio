@@ -1,0 +1,41 @@
+.footer {
+    height: 80px;
+    width: 850px;
+    bottom: 0;
+    padding: 30px;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.showcase {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.showcase:hover {
+    cursor: default;
+    scale: 1.1
+}
+
+.showcase span {
+    color: #7f7e82
+}
+
+@media screen and (max-width: 864px) {
+    .footer {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
