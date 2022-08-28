@@ -11,7 +11,7 @@ export default {
     contact: {
         mail: 'seymennklc@gmail.com',
         links: {
-            ig: 'https://www.instagram.com/seymennklc/',
+            // ig: '',
             github: 'https://github.com/seymenklc',
             linkedin: 'https://www.linkedin.com/in/seymen/'
         }

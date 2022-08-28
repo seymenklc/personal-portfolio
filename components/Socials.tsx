@@ -4,7 +4,6 @@ import config from '../config';
 // icon components
 import BiEnvelope from './icons/BiEnvelope';
 import BiGithub from './icons/BiGithub';
-import BiInstagram from './icons/BiInstagram';
 import BiLinkedin from './icons/BiLinkedin';
 
 const iconStyles = { width: '25px', height: '25px' };
@@ -15,11 +14,6 @@ export default function Socials() {
             <Link href={`mailto:${config.contact.mail}`}>
                 <a aria-label='email'>
                     <BiEnvelope className='icon' style={{ ...iconStyles }} />
-                </a>
-            </Link>
-            <Link href={config.contact.links.ig}>
-                <a target="_blank" aria-label='instagram'>
-                    <BiInstagram className='icon' style={{ ...iconStyles }} />
                 </a>
             </Link>
             <Link href={config.contact.links.github}>
