@@ -1,3 +1,12 @@
+.container {
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+    max-width: 500px;
+    flex-direction: column;
+    padding: 30px;
+}
+
 .icons {
     display: flex;
     justify-content: center;
@@ -5,14 +14,7 @@
     gap: 1rem;
 }
 
-.container {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    padding: 30px;
-}
-
-.container h4 {
+.container h3 {
     color: #413F42;
     text-align: center;
 }

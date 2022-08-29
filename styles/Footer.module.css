@@ -25,7 +25,7 @@
 }
 
 .showcase:hover {
-    cursor: default;
+    cursor: pointer;
     scale: 1.1
 }
 

@@ -13,7 +13,8 @@ export default {
         links: {
             // ig: '',
             github: 'https://github.com/seymenklc',
-            linkedin: 'https://www.linkedin.com/in/seymen/'
+            linkedin: 'https://www.linkedin.com/in/seymen/',
+            portofolio: 'https://github.com/seymenklc/personal-portfolio'
         }
     }
 };
