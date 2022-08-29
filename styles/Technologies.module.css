@@ -1,0 +1,25 @@
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container h4 {
+    color: #413F42;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1600px) {
+    .container {
+        margin-top: -10rem
+    }
+}
