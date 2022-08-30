@@ -15,13 +15,11 @@
 }
 
 .container h3 {
-    color: #413F42;
     text-align: center;
 }
 
-
 @media screen and (min-width: 1600px) {
     .container {
-        margin-top: -10rem
+        margin-top: -4rem
     }
 }

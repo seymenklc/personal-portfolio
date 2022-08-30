@@ -4,8 +4,9 @@
     padding: 30px;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: column;
     cursor: default;
+    gap: 1.2rem;
 }
 
 .textWrapper {
@@ -13,8 +14,11 @@
     text-align: justify;
 }
 
+.textWrapper :nth-child(1) {
+    text-align: center;
+}
+
 .textWrapper :nth-child(1) h2 {
-    color: #383639;
     margin: 2px 0;
 }
 
@@ -27,7 +31,6 @@
 
 .textWrapper p {
     margin-top: 1rem;
-    color: #383639;
     font-size: large;
 }
 
@@ -39,23 +42,14 @@
 
 @media screen and (min-width: 1600px) {
     .container {
-        margin-top: -10rem
+        margin-top: -2rem
     }
 }
 
 @media screen and (max-width: 864px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .textWrapper :nth-child(1) {
-        text-align: center
-    }
-
     .textWrapper {
         margin-top: 16px;
     }
-
 }
 
 @media screen and (max-width: 650px) {

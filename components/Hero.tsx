@@ -8,8 +8,8 @@ export default function Hero() {
         <div className={styles.container}>
             <Image
                 src='/images/avatar.png'
-                width={300}
-                height={300}
+                width={255}
+                height={255}
                 alt='avatar'
             />
             <div className={styles.textWrapper}>

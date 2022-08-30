@@ -9,6 +9,19 @@ body {
   background-color: #FEFEFA;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #413F42
+}
+
+p {
+  color: #383639;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
