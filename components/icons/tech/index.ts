@@ -16,10 +16,14 @@ import PythonIcon from './Python';
 import ExpressIcon from './Express';
 import PuppeteerIcon from './Puppeteer';
 import MysqlIcon from './MysqlIcon';
+import JwtIcon from './JwtIcon';
+import VitejsIcon from './Vitejs';
+import AxiosIcon from './Axios';
 
 const currentStack = [
     JavascriptIcon,
     TypescriptIcon,
+    VitejsIcon,
     ReactIcon,
     NextjsIcon,
     NodejsIcon,
@@ -49,7 +53,9 @@ const frameworks = [
 const libraries = [
     ReduxIcon,
     ReactRouterIcon,
+    JwtIcon,
     PuppeteerIcon,
+    AxiosIcon
 ];
 
 const databases = [
