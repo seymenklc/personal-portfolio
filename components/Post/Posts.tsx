@@ -1,19 +1,18 @@
 import { PostCard } from '.';
 import styles from '../../styles/Posts.module.css';
-import type { PostType } from '../../types';
+import type { PostsType, PostType } from '../../types';
 
 type Props = {
-    posts: PostType[];
+    posts: PostsType | any;
 };
 
 export default function Posts({ posts }: Props) {
-
     if (!posts.length) return <p>error</p>;
 
     return (
         <div className={styles.container}>
-            {posts.map(post => (
-                <PostCard key={post.id} post={post} />
+            {posts.map((post: PostType, idx: string) => (
+                <PostCard key={idx} post={post} />
             ))}
         </div>
     );

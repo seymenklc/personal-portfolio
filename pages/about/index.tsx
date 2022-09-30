@@ -1,20 +1,12 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import styles from '../../styles/About.module.css';
-import PageHead from "../../components/PageHead";
 import config from "../../config";
+// styling
+import styles from '../../styles/About.module.css';
+// components
+import PageHead from "../../components/PageHead";
 import Technologies from "../../components/Technologies";
 import { databases, frameworks, languages, libraries } from "../../components/icons/tech";
 
 export default function About() {
-    // const router = useRouter();
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         router.push('/');
-    //     }, 3000);
-    // }, [router]);
-
     return (
         <div className={styles.container}>
             <PageHead title='About' />

@@ -4,7 +4,8 @@
     padding: 30px;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row-reverse;
     cursor: default;
     gap: 1.2rem;
 }
@@ -14,9 +15,9 @@
     text-align: justify;
 }
 
-.textWrapper :nth-child(1) {
+/* .textWrapper :nth-child(1) {
     text-align: center;
-}
+} */
 
 .textWrapper :nth-child(1) h2 {
     margin: 2px 0;

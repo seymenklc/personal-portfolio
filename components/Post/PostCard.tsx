@@ -8,10 +8,10 @@ type Props = {
 };
 
 export default function Post({ post }: Props) {
-    const { description, title, slug, createdAt } = post.attributes;
+    const { description, title, createdAt } = post.attributes;
 
     return (
-        <Link href={`/blog/posts/${slug}`}>
+        <Link href={`/blog/posts/${post.slug}`}>
             <div className={styles.card}>
                 <div>
                     <h3>{title}</h3>

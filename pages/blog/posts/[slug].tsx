@@ -1,11 +1,12 @@
+import fs from 'fs';
 import moment from 'moment';
-import styles from '../../../styles/PostDetails.module.css';
-import client from '../../../apollo-client';
+import matter from 'gray-matter';
+import { v4 as uuid } from 'uuid';
 import { useRouter } from 'next/router';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { GET_ALL_POSTS, GET_INDIVDUAL_POST } from '../../../graphql/queries';
-import type { PostsType } from '../../../types';
+// styling
+import styles from '../../../styles/PostDetails.module.css';
 // components
 import PageHead from '../../../components/PageHead';
 import BiArrowLeft from '../../../components/icons/BiArrowLeft';
@@ -49,13 +50,13 @@ export default function PostDetails({ post }: Props) {
 }
 
 export async function getStaticPaths() {
-    const { data }: PostsType = await client.query({
-        query: GET_ALL_POSTS,
-    });
+    const files = fs.readdirSync("data");
 
-    const paths = data.posts.data.map(post => {
-        return { params: { slug: post.attributes.slug } };
-    });
+    const paths = files.map((fileName) => ({
+        params: {
+            slug: fileName.replace(".md", ""),
+        }
+    }));
 
     return { paths, fallback: false };
 }
@@ -67,21 +68,18 @@ type Context = {
 };
 
 export async function getStaticProps({ params }: Context) {
-    const { data } = await client.query({
-        query: GET_INDIVDUAL_POST,
-        variables: { slug: String(params.slug) }
-    });
+    const fileName = fs.readFileSync(`data/${params.slug}.md`, 'utf-8');
 
-    const { id, attributes } = data.posts.data[0];
-    const html = await serialize(attributes.body);
+    const { data: frontmatter, content } = matter(fileName);
+
+    const html = await serialize(content);
 
     const post = {
-        id,
-        attributes: { ...attributes, body: html }
+        id: uuid(),
+        attributes: { ...frontmatter, body: html }
     };
 
     return {
         props: { post },
-        revalidate: 18000 // 5 hours
     };
 }
